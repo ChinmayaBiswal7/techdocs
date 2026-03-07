@@ -51,7 +51,7 @@ Some of the properties in those base classes have changed, e.g., the contract st
 ### Example
 
 A typical change to a template model might look as follows, from:
-```ergo
+```concerto
 import org.accordproject.cicero.contract.* from https://models.accordproject.org/cicero/contract.cto
 import org.accordproject.cicero.runtime.* from https://models.accordproject.org/cicero/runtime.cto
 
@@ -65,7 +65,7 @@ asset PurchaseOrderFailure extends AccordContract {
 }
 ```
 To:
-```ergo
+```concerto
 import org.accordproject.contract.* from https://models.accordproject.org/accordproject/contract.cto
 import org.accordproject.runtime.* from https://models.accordproject.org/accordproject/runtime.cto
 import org.accordproject.party.* from https://models.accordproject.org/accordproject/party.cto
@@ -78,6 +78,8 @@ asset PurchaseOrderFailure extends Contract {
 ```
 
 ## Logic Changes
+
+> **DEPRECATION WARNING:** As of Cicero 0.25+, the Ergo language has been **completely deprecated** in favor of standard TypeScript. These instructions are preserved ONLY for users migrating extremely old templates from `0.21` to `0.22`. New templates should be written entirely in TypeScript using `logic.ts`.
 
 Minimal changes to the contract logic should be required, however a few changes to the base models may affect your Ergo code. Notably:
 1. You should import the new Accord Project core models as needed

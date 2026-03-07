@@ -133,6 +133,8 @@ There is no model changes required for this version.
 
 ## Logic Changes
 
+> **DEPRECATION WARNING:** As of Cicero 0.25+, the Ergo language has been **completely deprecated** in favor of standard TypeScript. These instructions are preserved ONLY for users migrating extremely old templates from `0.13` to `0.20`. New templates should be written entirely in TypeScript using `logic.ts`.
+
 Version `0.20` of Ergo has a few new features that are non backward compatible with version `0.13`. Those may require you to change your template logic. The main non-backward compatible feature is the new support for enumerated values.
 
 ### Enumerated Values
